@@ -29,7 +29,7 @@ A multi-tenant blog system built with Laravel for assessment purposes. Users reg
 ##  Installation & Setup
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/kikky1/multi-tenant-blog
 cd your-repo-name
 composer create-project laravel/laravel multi-tenancy
 cp .env.example .env
@@ -55,8 +55,8 @@ DB_PASSWORD=
 **POST** `/api/register`
 ```json
 {
-  "name": "John Doe",
-  "email": "john@example.com",
+  "name": "User 1",
+  "email": "user1@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -68,7 +68,7 @@ DB_PASSWORD=
 **POST** `/api/login`
 ```json
 {
-  "email": "john@example.com",
+  "email": "user1@example.com",
   "password": "password"
 }
 ```
