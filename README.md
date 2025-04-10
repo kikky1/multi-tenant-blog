@@ -31,7 +31,7 @@ A multi-tenant blog system built with Laravel for assessment purposes. Users reg
 ```bash
 git clone https://github.com/kikky1/multi-tenant-blog
 cd your-repo-name
-composer create-project laravel/laravel multi-tenancy
+composer install laravel/laravel multi-tenancy
 cp .env.example .env
 php artisan migrate
 php artisan serve
