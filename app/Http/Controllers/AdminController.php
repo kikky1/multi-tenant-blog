@@ -12,8 +12,12 @@ class AdminController extends Controller
 {
     public function index()
     {
-       $post = Post::all();
-        return view('admin.dashboard');
+       $tenantId = Auth::user()->tenant_id;
+       $userCount = User::where('tenant_id', $tenantId)->count();
+       $postCount = Post::count();
+
+
+        return view('admin.dashboard', compact('userCount', 'postCount'));
     }
     public function pending()
     {
@@ -39,7 +43,7 @@ class AdminController extends Controller
 
     public function viewPost()
     {
-        $posts = Post::with(['user', 'tenant'])->latest()->paginate(5);
+        $posts = Post::with(['user', 'tenant'])->latest()->paginate(4);
         return view('admin.viewPost', compact('posts'));
     }
 }
