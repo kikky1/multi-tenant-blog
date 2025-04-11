@@ -36,10 +36,9 @@
                     @method('DELETE')
                     <button class="btn btn-danger">Delete</button>
                   </form>
+    
                 </div>
                 
-                @else
-                <a href="" class="btn btn-primary">View</a>
                 @endif
                
               </td>
