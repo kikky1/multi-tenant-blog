@@ -31,7 +31,7 @@ class AdminController extends Controller
        $user =  User::findOrFail($user->id);
 
       $tenant = Tenant::create([
-        'name' => $user->name . "'s name"
+        'name' => $user->name . "'s Tenant"
        ]);
 
        $user->status = 'approved';

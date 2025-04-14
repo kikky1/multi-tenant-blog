@@ -21,6 +21,8 @@ Route::middleware('auth:sanctum')->controller(AuthController::class)->group(func
 
 Route::middleware('auth:sanctum')->controller(AdminPostController::class)->group(function (){
     Route::get('/admin/index',  'index');
+    Route::get('/admin/pendingUsers', 'pending');
+    Route::post('/admin/approveUser/{id}', 'approve');
 });
 
 Route::middleware('auth:sanctum')->controller(PostController::class)->group(function (){
